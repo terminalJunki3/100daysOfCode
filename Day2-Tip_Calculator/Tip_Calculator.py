@@ -26,5 +26,5 @@ def calulate_tip(bill, tip, people):
     return round((float_bill + tip) / float_people,2)
 
 
-answer = calulate_tip(total_bill, total_tip, total_people)
-print(answer)
+total = calulate_tip(total_bill, total_tip, total_people)
+print(f"Each person should pay: ${total}")
