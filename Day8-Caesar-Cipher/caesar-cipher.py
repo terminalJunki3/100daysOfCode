@@ -1,4 +1,5 @@
 import string
+
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
             'v', 'w', 'x', 'y', 'z']
 
@@ -8,13 +9,12 @@ shift = int(input("Type the shift number:\n"))
 exit = False
 
 
-def skip_special(letter):
-    if letter.isalpha():
-        print("hi")
-
 def caesar(text, shift, direction):
-        encrypted = list()
-        for i in text:
+    if shift > 26:
+        print("Select shift between 0 and 26. Try again.")
+    encrypted = list()
+    for i in text:
+        try:
             if direction == "encode":
                 if alphabet.index(i) + shift >= 26:
                     encrypted.append(alphabet[alphabet.index(i) + shift - 26])
@@ -22,8 +22,10 @@ def caesar(text, shift, direction):
                     encrypted.append(alphabet[alphabet.index(i) + shift])
             elif direction == "decode":
                 encrypted.append(alphabet[alphabet.index(i) - shift])
+        except ValueError as a:
+            encrypted.append(i)
 
-        print(''.join(encrypted))
+    print(''.join(encrypted))
 
 
 caesar(text=text, shift=shift, direction=direction)
