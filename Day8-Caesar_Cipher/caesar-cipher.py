@@ -6,7 +6,6 @@ text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 exit = False
 
-
 def caesar(text, shift, direction):
     if shift > 26:
         print("Select shift between 0 and 26. Try again.")
