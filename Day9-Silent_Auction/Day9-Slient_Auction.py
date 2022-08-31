@@ -48,4 +48,5 @@ while not bidding_over:
 
     clear_screen()
 
+
 print(f"The winner is {highest_bidder} with a bid of ${highest_bid}")
