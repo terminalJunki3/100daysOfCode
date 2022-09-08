@@ -22,7 +22,6 @@ def game():
     random_number = get_random_number()
     number_of_guesses = 0
     guessed = False
-    print(random_number)
     while not guessed:
         players_guess = int(input("Guess a number between 1 and 100: "))
         number_of_guesses += 1
