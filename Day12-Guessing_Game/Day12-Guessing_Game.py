@@ -35,6 +35,7 @@ def game():
             print("Too low.")
         else:
             print("Too high.")
+        print(f"You have {number_of_turns - number_of_guesses} guesses left.")
 
 
 print(art.art)
