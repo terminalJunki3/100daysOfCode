@@ -17,6 +17,9 @@ def clear_screen():
 
 
 def grab_question(compare: str):
+    """
+    Randomly grabs a questions from the game data file.
+    """
     score = game_data.data[random.randint(0, len(game_data.data) - 1)]
     print(f"{compare} {score['name']}, "
           f"a {score['description']}, "
@@ -25,6 +28,10 @@ def grab_question(compare: str):
 
 
 def compare(compare: int, against: int):
+    """
+     Function to take a users guess and compare it with two questions
+     via the "grab_question" function.
+    """
     guess = input("Who has more followers? Type 'A' or 'B': ").lower()
     if guess == 'a':
         guess = compare
@@ -65,22 +72,3 @@ while flag:
         print(f"Sorry, that's wrong. Final score: {score}")
         score = 0
         flag = False
-
-# Compare the two scores
-
-
-# If correct, add point
-# show two other questions
-# Else, that's wrong Final Score
-
-
-# compare two terms
-# if right show
-# You are right! Current Score: 1
-# Compare A: Name, operation, from
-# then VS symbol
-# Compare A: Name, operation, from
-
-# keep score
-# keep going until you are wrong
-# Sorry, that's wong. Final score: 3
